@@ -78,6 +78,19 @@ $sig    = 't=' . $t . ',v1=' . hash_hmac( 'sha256', $t . '.' . $body, $secret );
 check( 'webhook signature (sandbox whsec_ secret) accepted', Relay_Delivery_Webhook::verify( $sig, $body, $secret, $t ) );
 check( 'tampered body refused', ! Relay_Delivery_Webhook::verify( $sig, $body . ' ', $secret, $t ) );
 
+// Address sent to Relay: the state name, not the WooCommerce state code (BJ "LI" -> "Littoral").
+if ( ! function_exists( 'WC' ) ) {
+	function WC() {
+		return (object) array( 'countries' => new class() { public function get_states( $c ) { return 'BJ' === $c ? array( 'LI' => 'Littoral', 'OU' => 'Ou&eacute;m&eacute;' ) : array(); } } );
+	}
+}
+require_once __DIR__ . '/../relay-delivery/includes/class-relay-deliveries.php';
+check( 'state code -> name (BJ LI)', 'Littoral' === Relay_Delivery_Deliveries::state_name( 'BJ', 'LI' ) );
+check( 'state name decoded (BJ OU)', 'Ouémé' === Relay_Delivery_Deliveries::state_name( 'BJ', 'OU' ) );
+check( 'unknown state kept as typed', 'Atlantique Sud' === Relay_Delivery_Deliveries::state_name( 'BJ', 'Atlantique Sud' ) );
+check( 'no states for country: kept', 'CA' === Relay_Delivery_Deliveries::state_name( 'XX', 'CA' ) );
+check( 'empty state stays empty', '' === Relay_Delivery_Deliveries::state_name( 'BJ', '' ) );
+
 if ( getenv( 'SBX_LOCAL' ) && getenv( 'SBX_KEY_FILE' ) ) {
 	$key = json_decode( file_get_contents( getenv( 'SBX_KEY_FILE' ) ), true )['key'];
 	$GLOBALS['opts']['relay_delivery_settings'] = array( 'api_key' => $key );

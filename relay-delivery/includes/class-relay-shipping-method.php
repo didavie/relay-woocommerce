@@ -154,8 +154,12 @@ class Relay_Delivery_Shipping_Method extends WC_Shipping_Method {
 	public static function address_line( array $dest ) {
 		$parts = array();
 		foreach ( array( 'address', 'address_1', 'address_2', 'city', 'state' ) as $k ) {
-			if ( ! empty( $dest[ $k ] ) && ! in_array( $dest[ $k ], $parts, true ) ) {
-				$parts[] = trim( (string) $dest[ $k ] );
+			if ( empty( $dest[ $k ] ) ) {
+				continue;
+			}
+			$v = 'state' === $k ? Relay_Delivery_Deliveries::state_name( isset( $dest['country'] ) ? $dest['country'] : '', $dest[ $k ] ) : trim( (string) $dest[ $k ] );
+			if ( ! in_array( $v, $parts, true ) ) {
+				$parts[] = $v;
 			}
 		}
 		if ( ! $parts ) {

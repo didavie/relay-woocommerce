@@ -286,9 +286,26 @@ class Relay_Delivery_Deliveries {
 	 */
 	public static function delivery_address( WC_Order $order ) {
 		$parts = $order->has_shipping_address()
-			? array( $order->get_shipping_address_1(), $order->get_shipping_address_2(), $order->get_shipping_city(), $order->get_shipping_state(), self::country_name( $order->get_shipping_country() ) )
-			: array( $order->get_billing_address_1(), $order->get_billing_address_2(), $order->get_billing_city(), $order->get_billing_state(), self::country_name( $order->get_billing_country() ) );
+			? array( $order->get_shipping_address_1(), $order->get_shipping_address_2(), $order->get_shipping_city(), self::state_name( $order->get_shipping_country(), $order->get_shipping_state() ), self::country_name( $order->get_shipping_country() ) )
+			: array( $order->get_billing_address_1(), $order->get_billing_address_2(), $order->get_billing_city(), self::state_name( $order->get_billing_country(), $order->get_billing_state() ), self::country_name( $order->get_billing_country() ) );
 		return trim( implode( ', ', array_filter( array_map( 'trim', array_map( 'strval', $parts ) ) ) ) );
+	}
+
+	/**
+	 * State / region name from its WooCommerce code (e.g. BJ + "LI" -> "Littoral"), so the
+	 * address Relay geocodes and the driver reads carries the name, not the code.
+	 *
+	 * @param string $country ISO-2 country.
+	 * @param string $state   State code or free text.
+	 * @return string
+	 */
+	public static function state_name( $country, $state ) {
+		$state = (string) $state;
+		if ( '' === $state || ! function_exists( 'WC' ) || ! WC()->countries ) {
+			return $state;
+		}
+		$states = WC()->countries->get_states( (string) $country );
+		return is_array( $states ) && isset( $states[ $state ] ) ? html_entity_decode( $states[ $state ] ) : $state;
 	}
 
 	/**

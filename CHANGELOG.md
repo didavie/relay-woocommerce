@@ -2,6 +2,12 @@
 
 All notable changes to this plugin are listed here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the plugin uses [Semantic Versioning](https://semver.org/). The WordPress changelog is also kept in `relay-delivery/readme.txt`.
 
+## [Unreleased]
+
+### Fixed
+
+- The address sent to Relay (price at checkout and the delivery) carries the region name ("Littoral") instead of the WooCommerce region code ("LI").
+
 ## [1.0.0] - 2026-10-29
 
 ### Added
