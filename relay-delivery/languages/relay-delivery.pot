@@ -151,7 +151,7 @@ msgid "Voir le journal"
 msgstr ""
 
 #: includes/class-relay-admin.php:268
-msgid "Clé API non enregistrée : elle doit commencer par rb_live_ ou rb_test_."
+msgid "Clé API non enregistrée : elle doit commencer par rb_live_ (ou rb_sbx_ pour tester sur la sandbox API)."
 msgstr ""
 
 #: includes/class-relay-admin.php:276

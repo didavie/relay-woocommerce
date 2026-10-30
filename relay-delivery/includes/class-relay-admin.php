@@ -267,7 +267,7 @@ class Relay_Delivery_Admin {
 				$out['api_key'] = $key;
 				Relay_Delivery_Settings::set_state( array( 'shop' => null ) );
 			} else {
-				WC_Admin_Settings::add_error( __( 'Clé API non enregistrée : elle doit commencer par rb_live_, rb_test_ ou rb_sbx_ (sandbox API).', 'relay-delivery' ) );
+				WC_Admin_Settings::add_error( __( 'Clé API non enregistrée : elle doit commencer par rb_live_ (ou rb_sbx_ pour tester sur la sandbox API).', 'relay-delivery' ) );
 			}
 		}
 		$secret = isset( $in['webhook_secret'] ) ? trim( sanitize_text_field( (string) $in['webhook_secret'] ) ) : '';

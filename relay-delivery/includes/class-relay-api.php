@@ -1,6 +1,6 @@
 <?php
 /**
- * Relay shop API client (/api/v1, Bearer rb_live_ / rb_test_ key, or rb_sbx_ for the API sandbox).
+ * Relay shop API client (/api/v1, Bearer rb_live_ key, or rb_sbx_ for the API sandbox).
  *
  * @package RelayDelivery
  */

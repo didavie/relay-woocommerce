@@ -152,8 +152,8 @@ msgid "Voir le journal"
 msgstr "View the log"
 
 #: includes/class-relay-admin.php:268
-msgid "Clé API non enregistrée : elle doit commencer par rb_live_, rb_test_ ou rb_sbx_ (sandbox API)."
-msgstr "API key not saved: it must start with rb_live_, rb_test_ or rb_sbx_ (API sandbox)."
+msgid "Clé API non enregistrée : elle doit commencer par rb_live_ (ou rb_sbx_ pour tester sur la sandbox API)."
+msgstr "API key not saved: it must start with rb_live_ (or rb_sbx_ to test on the API sandbox)."
 
 #: includes/class-relay-admin.php:276
 msgid "Secret du webhook non enregistré : il commence par whsec_."
