@@ -1,0 +1,38 @@
+{
+	"name": "didavie/relay-woocommerce",
+	"description": "Relay delivery for WooCommerce: live Relay price at checkout, delivery created from the order, customer tracking link and order statuses updated by signed webhooks.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"homepage": "https://relaypartner.didavie.com/en/developers",
+	"support": {
+		"email": "relay@didavie.com",
+		"issues": "https://github.com/didavie/relay-woocommerce/issues"
+	},
+	"authors": [
+		{
+			"name": "Didavie",
+			"email": "relay@didavie.com",
+			"homepage": "https://didavie.com"
+		}
+	],
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"squizlabs/php_codesniffer": "^3.10",
+		"wp-coding-standards/wpcs": "^3.1"
+	},
+	"scripts": {
+		"lint": "phpcs",
+		"lint:fix": "phpcbf",
+		"test": "php tests/test-sandbox-routing.php"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"sort-packages": true
+	}
+}

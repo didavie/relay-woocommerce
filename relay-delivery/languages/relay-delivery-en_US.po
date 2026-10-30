@@ -1,0 +1,538 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Relay Livraison pour WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: relay@didavie.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: relay-delivery\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/class-relay-admin.php:122
+msgid "Les livreurs Relay livrent vos commandes. La clé API se crée dans Relay Partenaires : Boutique > Connecter mon site."
+msgstr "Relay drivers deliver your orders. Create the API key in Relay Partners: Shop > Connect my website."
+
+#: includes/class-relay-admin.php:126
+msgid "Clé API de la boutique"
+msgstr "Shop API key"
+
+#: includes/class-relay-admin.php:129
+msgid "Tester la connexion"
+msgstr "Test the connection"
+
+#: includes/class-relay-admin.php:135 includes/class-relay-admin.php:323
+#, php-format
+msgid "Connecté : %s"
+msgstr "Connected: %s"
+
+#: includes/class-relay-admin.php:139 includes/class-relay-admin.php:324
+msgid "clé de test"
+msgstr "test key"
+
+#: includes/class-relay-admin.php:143
+msgid "La clé enregistrée n'est jamais réaffichée. Laissez vide pour la garder."
+msgstr "The saved key is never shown again. Leave empty to keep it."
+
+#: includes/class-relay-admin.php:147
+msgid "Mode test"
+msgstr "Test mode"
+
+#: includes/class-relay-admin.php:148
+msgid "Valider les livraisons sans les créer (aucun livreur appelé)"
+msgstr "Validate deliveries without creating them (no driver is called)"
+
+#: includes/class-relay-admin.php:151
+msgid "Création de la livraison"
+msgstr "Delivery creation"
+
+#: includes/class-relay-admin.php:153
+msgid "Automatique quand la commande passe « En cours »"
+msgstr "Automatic when the order becomes \"Processing\""
+
+#: includes/class-relay-admin.php:154
+msgid "Manuelle, avec le bouton dans la commande"
+msgstr "Manual, with the button in the order"
+
+#: includes/class-relay-admin.php:158
+msgid "Paiement à la livraison"
+msgstr "Cash on delivery"
+
+#: includes/class-relay-admin.php:159
+msgid "Le livreur encaisse le total de la commande (commandes « Paiement à la livraison »)"
+msgstr "The driver collects the order total (\"Cash on delivery\" orders)"
+
+#: includes/class-relay-admin.php:159
+msgid "Le montant est donné au livreur dans les instructions du colis."
+msgstr "The amount is given to the driver in the parcel instructions."
+
+#: includes/class-relay-admin.php:162
+msgid "Type de colis par défaut"
+msgstr "Default parcel type"
+
+#: includes/class-relay-admin.php:172
+msgid "Prix au paiement"
+msgstr "Price at checkout"
+
+#: includes/class-relay-admin.php:174
+msgid "Prix Relay en direct selon l'adresse du client"
+msgstr "Live Relay price for the customer's address"
+
+#: includes/class-relay-admin.php:176
+msgid "Prix fixe de secours"
+msgstr "Fallback fixed price"
+
+#: includes/class-relay-admin.php:179
+msgid "Utilisé quand Relay ne répond pas ou quand le prix en direct est coupé."
+msgstr "Used when Relay does not answer or when the live price is off."
+
+#: includes/class-relay-admin.php:183
+msgid "Qui paie la livraison"
+msgstr "Who pays for delivery"
+
+#: includes/class-relay-admin.php:185
+msgid "Le client, ajouté à sa commande"
+msgstr "The customer, added to the order"
+
+#: includes/class-relay-admin.php:186
+msgid "La boutique (livraison offerte)"
+msgstr "The shop (free delivery)"
+
+#: includes/class-relay-admin.php:187
+msgid "Le client paie le livreur à la livraison"
+msgstr "The customer pays the driver on delivery"
+
+#: includes/class-relay-admin.php:191
+msgid "E-mail au client"
+msgstr "Customer e-mail"
+
+#: includes/class-relay-admin.php:192
+msgid "Ajouter le lien de suivi Relay dans l'e-mail de commande"
+msgstr "Add the Relay tracking link to the order e-mail"
+
+#: includes/class-relay-admin.php:195
+msgid "Statuts de commande"
+msgstr "Order statuses"
+
+#: includes/class-relay-admin.php:197
+msgid "Relay met à jour vos commandes par des webhooks signés. Dans Relay Partners, collez cette adresse comme URL de webhook :"
+msgstr "Relay updates your orders with signed webhooks. In Relay Partners, paste this address as the webhook URL:"
+
+#: includes/class-relay-admin.php:200
+msgid "Secret du webhook (whsec_…), affiché une fois dans Relay Partners. Laissez vide pour le garder."
+msgstr "Webhook secret (whsec_…), shown once in Relay Partners. Leave empty to keep it."
+
+#: includes/class-relay-admin.php:201
+msgid "Livré : la commande passe « Terminée ». Problème ou retour : « En attente ». Récupéré et annulé : note dans la commande."
+msgstr "Delivered: the order becomes \"Completed\". Problem or return: \"On hold\". Picked up and cancelled: note in the order."
+
+#: includes/class-relay-admin.php:205
+msgid "Adresse de l'API"
+msgstr "API address"
+
+#: includes/class-relay-admin.php:208
+msgid "À ne changer que si Relay vous le demande."
+msgstr "Change it only if Relay asks you to."
+
+#: includes/class-relay-admin.php:217
+#, php-format
+msgid "Dernier appel : %1$s, %2$s, %3$s."
+msgstr "Last call: %1$s, %2$s, %3$s."
+
+#: includes/class-relay-admin.php:220
+msgid "réussi"
+msgstr "succeeded"
+
+#: includes/class-relay-admin.php:223
+msgid "Dernier appel : aucun pour le moment."
+msgstr "Last call: none yet."
+
+#: includes/class-relay-admin.php:226
+msgid "Voir le journal"
+msgstr "View the log"
+
+#: includes/class-relay-admin.php:268
+msgid "Clé API non enregistrée : elle doit commencer par rb_live_, rb_test_ ou rb_sbx_ (sandbox API)."
+msgstr "API key not saved: it must start with rb_live_, rb_test_ or rb_sbx_ (API sandbox)."
+
+#: includes/class-relay-admin.php:276
+msgid "Secret du webhook non enregistré : il commence par whsec_."
+msgstr "Webhook secret not saved: it starts with whsec_."
+
+#: includes/class-relay-admin.php:306 includes/class-relay-order-box.php:135
+msgid "Accès refusé."
+msgstr "Access denied."
+
+#: includes/class-relay-admin.php:44
+msgid "Relay"
+msgstr "Relay"
+
+#: includes/class-relay-admin.php:68
+msgid "Test en cours…"
+msgstr "Testing…"
+
+#: includes/class-relay-admin.php:69
+msgid "Un instant…"
+msgstr "One moment…"
+
+#: includes/class-relay-admin.php:70
+msgid "Annuler la livraison Relay ? C'est gratuit tant que le colis n'est pas récupéré."
+msgstr "Cancel the Relay delivery? It is free until the parcel is picked up."
+
+#: includes/class-relay-admin.php:71
+msgid "Erreur, réessayez."
+msgstr "Error, try again."
+
+#: includes/class-relay-api.php:40
+msgid "Aucune clé API Relay n'est enregistrée."
+msgstr "No Relay API key is saved."
+
+#: includes/class-relay-api.php:69
+msgid "Réponse illisible de Relay."
+msgstr "Unreadable answer from Relay."
+
+#: includes/class-relay-api.php:78
+msgid "Demande refusée par Relay."
+msgstr "Request refused by Relay."
+
+#: includes/class-relay-deliveries.php:142
+msgid "Création déjà en cours pour cette commande."
+msgstr "Creation already in progress for this order."
+
+#: includes/class-relay-deliveries.php:165
+#, php-format
+msgid "Relay (mode test) : livraison validée sans être créée (%s). Aucun livreur n'a été appelé."
+msgstr "Relay (test mode): delivery validated without being created (%s). No driver was called."
+
+#: includes/class-relay-deliveries.php:168
+#, php-format
+msgid "Relay : cette commande avait déjà une livraison (%s), elle a été reprise."
+msgstr "Relay: this order already had a delivery (%s), it was reused."
+
+#: includes/class-relay-deliveries.php:170
+#, php-format
+msgid "Livraison Relay créée : %1$s (frais Relay %2$s)."
+msgstr "Relay delivery created: %1$s (Relay fee %2$s)."
+
+#: includes/class-relay-deliveries.php:172
+msgid "(automatique, commande en cours)"
+msgstr "(automatic, order processing)"
+
+#: includes/class-relay-deliveries.php:190
+#, php-format
+msgid "Livraison Relay refusée : %s"
+msgstr "Relay delivery refused: %s"
+
+#: includes/class-relay-deliveries.php:218
+#, php-format
+msgid "Paiement à la livraison : encaisser %s (total de la commande)."
+msgstr "Cash on delivery: collect %s (order total)."
+
+#: includes/class-relay-deliveries.php:226
+msgid "Client"
+msgstr "Customer"
+
+#: includes/class-relay-deliveries.php:334
+msgid "Relay (mode test) : livraison retirée de la commande."
+msgstr "Relay (test mode): delivery removed from the order."
+
+#: includes/class-relay-deliveries.php:338
+#, php-format
+msgid "Annulée depuis WooCommerce (commande %s)"
+msgstr "Cancelled from WooCommerce (order %s)"
+
+#: includes/class-relay-deliveries.php:345
+#, php-format
+msgid "Livraison Relay %s annulée (gratuit avant la récupération)."
+msgstr "Relay delivery %s cancelled (free before pickup)."
+
+#: includes/class-relay-deliveries.php:348
+#, php-format
+msgid "Annulation Relay refusée : %s"
+msgstr "Relay cancellation refused: %s"
+
+#: includes/class-relay-deliveries.php:399
+#, php-format
+msgid "Relay : %s."
+msgstr "Relay: %s."
+
+#: includes/class-relay-deliveries.php:441
+msgid "test, rien créé"
+msgstr "test, nothing created"
+
+#: includes/class-relay-deliveries.php:442 includes/class-relay-deliveries.php:443 includes/class-relay-deliveries.php:444
+msgid "en attente d'un livreur"
+msgstr "waiting for a driver"
+
+#: includes/class-relay-deliveries.php:445 includes/class-relay-deliveries.php:446
+msgid "livreur trouvé"
+msgstr "driver found"
+
+#: includes/class-relay-deliveries.php:447
+msgid "livreur en route vers la boutique"
+msgstr "driver on the way to the shop"
+
+#: includes/class-relay-deliveries.php:448
+msgid "colis récupéré"
+msgstr "parcel picked up"
+
+#: includes/class-relay-deliveries.php:449 includes/class-relay-deliveries.php:450
+msgid "en route vers le client"
+msgstr "on the way to the customer"
+
+#: includes/class-relay-deliveries.php:451
+msgid "livré"
+msgstr "delivered"
+
+#: includes/class-relay-deliveries.php:452
+msgid "annulée"
+msgstr "cancelled"
+
+#: includes/class-relay-deliveries.php:453 includes/class-relay-deliveries.php:454
+msgid "problème signalé"
+msgstr "problem reported"
+
+#: includes/class-relay-deliveries.php:455
+msgid "retour en cours"
+msgstr "return in progress"
+
+#: includes/class-relay-deliveries.php:456
+msgid "retourné"
+msgstr "returned"
+
+#: includes/class-relay-deliveries.php:457
+msgid "échec de livraison"
+msgstr "delivery failed"
+
+#: includes/class-relay-deliveries.php:470
+msgid "Relay ne livre pas encore à cette adresse."
+msgstr "Relay does not deliver to this address yet."
+
+#: includes/class-relay-deliveries.php:471
+msgid "Le numéro de téléphone du client n'est pas valide."
+msgstr "The customer's phone number is not valid."
+
+#: includes/class-relay-deliveries.php:472
+msgid "Limite de livraisons du jour atteinte pour votre boutique."
+msgstr "Your shop reached today's delivery limit."
+
+#: includes/class-relay-deliveries.php:473
+msgid "Trop de colis attendent déjà un livreur."
+msgstr "Too many parcels are already waiting for a driver."
+
+#: includes/class-relay-deliveries.php:474
+msgid "L'accès API de votre boutique est en pause. Contactez Relay."
+msgstr "Your shop's API access is paused. Contact Relay."
+
+#: includes/class-relay-deliveries.php:475
+msgid "Le service Relay pour les sites est en pause. Réessayez plus tard."
+msgstr "The Relay service for websites is paused. Try again later."
+
+#: includes/class-relay-deliveries.php:476
+msgid "Clé API Relay invalide ou révoquée."
+msgstr "Invalid or revoked Relay API key."
+
+#: includes/class-relay-deliveries.php:477
+msgid "Relay est injoignable pour le moment."
+msgstr "Relay cannot be reached right now."
+
+#: includes/class-relay-deliveries.php:478
+msgid "Aucun prix Relay pour ce trajet."
+msgstr "No Relay price for this route."
+
+#: includes/class-relay-emails.php:40 includes/class-relay-emails.php:46
+msgid "Suivi de votre livraison Relay"
+msgstr "Track your Relay delivery"
+
+#: includes/class-relay-emails.php:42 includes/class-relay-emails.php:49
+#, php-format
+msgid "Code de suivi : %s"
+msgstr "Tracking code: %s"
+
+#: includes/class-relay-emails.php:50
+msgid "Suivre ma livraison"
+msgstr "Track my delivery"
+
+#: includes/class-relay-emails.php:66
+#, php-format
+msgid "Votre commande part avec Relay. Suivez la livraison ici : %s"
+msgstr "Your order ships with Relay. Track the delivery here: %s"
+
+#: includes/class-relay-order-box.php:100
+msgid "Voir le suivi"
+msgstr "View tracking"
+
+#: includes/class-relay-order-box.php:103
+msgid "Actualiser"
+msgstr "Refresh"
+
+#: includes/class-relay-order-box.php:107
+msgid "Annuler la livraison"
+msgstr "Cancel the delivery"
+
+#: includes/class-relay-order-box.php:108
+msgid "Gratuit tant que le colis n'est pas récupéré."
+msgstr "Free until the parcel is picked up."
+
+#: includes/class-relay-order-box.php:139
+msgid "Commande introuvable."
+msgstr "Order not found."
+
+#: includes/class-relay-order-box.php:144
+msgid "La livraison existe déjà."
+msgstr "The delivery already exists."
+
+#: includes/class-relay-order-box.php:155
+msgid "Action inconnue."
+msgstr "Unknown action."
+
+#: includes/class-relay-order-box.php:48
+msgid "Cette commande n'utilise pas la livraison Relay."
+msgstr "This order does not use Relay delivery."
+
+#: includes/class-relay-order-box.php:49
+msgid "Créer quand même la livraison Relay"
+msgstr "Create the Relay delivery anyway"
+
+#: includes/class-relay-order-box.php:56
+msgid "Refusée"
+msgstr "Refused"
+
+#: includes/class-relay-order-box.php:58
+msgid "Réessayer"
+msgstr "Try again"
+
+#: includes/class-relay-order-box.php:62
+#, php-format
+msgid "Livraison %s annulée."
+msgstr "Delivery %s cancelled."
+
+#: includes/class-relay-order-box.php:64
+msgid "Pas encore créée"
+msgstr "Not created yet"
+
+#: includes/class-relay-order-box.php:67
+msgid "Estimation Relay"
+msgstr "Relay estimate"
+
+#: includes/class-relay-order-box.php:69
+msgid "Créer la livraison Relay"
+msgstr "Create the Relay delivery"
+
+#: includes/class-relay-order-box.php:72
+msgid "Mode test actif : rien ne sera créé chez Relay."
+msgstr "Test mode is on: nothing will be created at Relay."
+
+#: includes/class-relay-order-box.php:79
+msgid "Suivi"
+msgstr "Tracking"
+
+#: includes/class-relay-order-box.php:80
+msgid "Statut"
+msgstr "Status"
+
+#: includes/class-relay-order-box.php:82 includes/class-relay-order-box.php:90
+msgid "Livreur"
+msgstr "Driver"
+
+#: includes/class-relay-order-box.php:82
+msgid "pas encore"
+msgstr "not yet"
+
+#: includes/class-relay-order-box.php:85
+msgid "Frais Relay"
+msgstr "Relay fee"
+
+#: includes/class-relay-order-box.php:88
+msgid "À encaisser"
+msgstr "To collect"
+
+#: includes/class-relay-order-box.php:88
+msgid "rien"
+msgstr "nothing"
+
+#: includes/class-relay-order-box.php:90
+msgid "Créée"
+msgstr "Created"
+
+#: includes/class-relay-order-box.php:90
+msgid "Récupéré"
+msgstr "Picked up"
+
+#: includes/class-relay-order-box.php:90
+msgid "Livré"
+msgstr "Delivered"
+
+#: includes/class-relay-settings.php:131
+msgid "Standard"
+msgstr "Standard"
+
+#: includes/class-relay-settings.php:132
+msgid "Documents"
+msgstr "Documents"
+
+#: includes/class-relay-settings.php:133
+msgid "Vêtements"
+msgstr "Clothing"
+
+#: includes/class-relay-settings.php:134
+msgid "Électronique"
+msgstr "Electronics"
+
+#: includes/class-relay-settings.php:135
+msgid "Alimentation"
+msgstr "Food"
+
+#: includes/class-relay-settings.php:136
+msgid "Médicaments"
+msgstr "Medicines"
+
+#: includes/class-relay-settings.php:137
+msgid "Fragile"
+msgstr "Fragile"
+
+#: includes/class-relay-settings.php:138
+msgid "Autre"
+msgstr "Other"
+
+#: includes/class-relay-shipping-method.php:24 includes/class-relay-shipping-method.php:38 includes/class-relay-shipping-method.php:41
+msgid "Livraison Relay"
+msgstr "Relay delivery"
+
+#: includes/class-relay-shipping-method.php:25
+msgid "Livraison par les livreurs Relay, au prix Relay calculé pour l'adresse du client. Réglages généraux : WooCommerce > Réglages > Livraison > Relay."
+msgstr "Delivery by Relay drivers, at the Relay price for the customer's address. General settings: WooCommerce > Settings > Shipping > Relay."
+
+#: includes/class-relay-shipping-method.php:36
+msgid "Nom affiché au client"
+msgstr "Name shown to the customer"
+
+#: includes/class-relay-shipping-method.php:74
+#, php-format
+msgid "(%s à payer au livreur)"
+msgstr "(%s to pay the driver)"
+
+#: includes/class-relay-shipping-method.php:76
+msgid "(offerte)"
+msgstr "(free)"
+
+#: includes/class-relay-shipping-method.php:78
+msgid "(à partir de)"
+msgstr "(from)"
+
+#: relay-delivery.php:3
+msgid "Relay Livraison pour WooCommerce"
+msgstr "Relay Delivery for WooCommerce"
+
+#: relay-delivery.php:4
+msgid "Livraison Relay pour votre boutique WooCommerce : prix en direct au paiement, création de la livraison, suivi client et statuts mis à jour automatiquement."
+msgstr "Relay delivery for your WooCommerce store: live price at checkout, delivery creation, customer tracking and order statuses updated automatically."
+
+#: relay-delivery.php:48
+msgid "Relay Livraison a besoin de WooCommerce. Activez WooCommerce pour l'utiliser."
+msgstr "Relay Delivery needs WooCommerce. Activate WooCommerce to use it."
+
+#: relay-delivery.php:85
+msgid "Réglages"
+msgstr "Settings"
+

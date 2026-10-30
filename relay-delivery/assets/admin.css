@@ -1,0 +1,27 @@
+/* Relay Livraison: WordPress admin look, Relay navy #0E2A5C, flame #E85D04 as small accents only. */
+.relay-settings .relay-title { display: flex; align-items: center; gap: 8px; color: #0E2A5C; }
+.relay-settings .relay-mark { width: 10px; height: 10px; border-radius: 50%; background: #E85D04; display: inline-block; }
+.relay-settings .relay-intro { max-width: 720px; }
+.relay-settings .relay-radio, .relay-settings .relay-check { display: inline-block; margin: 2px 0; }
+.relay-settings .relay-code { user-select: all; }
+.relay-settings .relay-last { color: #50575e; border-top: 1px solid #dcdcde; padding-top: 12px; }
+.relay-connection { margin-left: 6px; }
+.relay-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; line-height: 18px; background: #f0f0f1; color: #1d2327; }
+.relay-badge--ok { background: #e7f5ec; color: #0a5c2b; }
+.relay-badge--ko { background: #fcf0f1; color: #8a2424; }
+.relay-badge--run { background: #e8edf6; color: #0E2A5C; }
+.relay-badge--todo { background: #fdf0e6; color: #a43f00; }
+.relay-badge--test { background: #f6f7f7; color: #50575e; border: 1px dashed #8c8f94; }
+.relay-ok { color: #0a5c2b; }
+.relay-ko { color: #8a2424; }
+.relay-box .relay-row { display: flex; justify-content: space-between; gap: 8px; margin: 6px 0; }
+.relay-box .relay-row > span:first-child { color: #50575e; }
+.relay-box .relay-muted { color: #646970; font-size: 12px; }
+.relay-box .relay-reason { color: #8a2424; }
+.relay-box .relay-cancel { color: #b32d2e; }
+.relay-box .relay-actions .button { margin-right: 4px; }
+.relay-btn-flame.button-primary { background: #E85D04; border-color: #c94f02; }
+.relay-btn-flame.button-primary:hover, .relay-btn-flame.button-primary:focus { background: #c94f02; border-color: #a84200; }
+.relay-steps { display: flex; list-style: none; margin: 10px 0; padding: 0; gap: 4px; }
+.relay-steps li { flex: 1; font-size: 11px; color: #8c8f94; border-top: 3px solid #dcdcde; padding-top: 4px; margin: 0; }
+.relay-steps li.is-done { color: #0E2A5C; border-top-color: #0E2A5C; }

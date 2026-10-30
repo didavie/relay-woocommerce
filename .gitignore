@@ -1,0 +1,12 @@
+# Dependencies and build output
+/vendor/
+/build/
+
+# Local files
+.env
+.env.*
+*.log
+.DS_Store
+.idea/
+.vscode/
+*.zip
