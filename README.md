@@ -57,7 +57,7 @@ You can also copy the `relay-delivery` folder into `wp-content/plugins/`.
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| Clé API de la boutique | empty | Shop key (`rb_live_`, `rb_test_` or `rb_sbx_`). Never shown again after saving. |
+| Clé API de la boutique | empty | Shop key (`rb_live_`, or `rb_sbx_` from the sandbox). Never shown again after saving. |
 | Mode test | on | Deliveries are checked and priced, nothing is created and no driver is called. |
 | Création de la livraison | automatic | Automatic when the order becomes *Processing*, or manual with the order button. |
 | Paiement à la livraison | on | The driver collects the order total for cash on delivery orders. |
